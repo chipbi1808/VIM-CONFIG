@@ -43,6 +43,12 @@ set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
     autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 " }
 
+" Plugin Management {
+    call plug#begin('~/.vim/plugged')
+    Plug 'neoclide/coc.nvim'
+    call plug#end() 
+" }
+
 " Key (re)Mappings {
 
     "The default leader is '\', but many people prefer ',' as it's in a standard
